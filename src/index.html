@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Formulario con HTML5</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -11,19 +11,143 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
-  </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      </head>
+
+<body>
+  <div class="container-fluid">
+    <form>
+        <div class="card">
+            <div class="card text-center rounded-3">
+                <div class="row">
+                    <div class="card-header title col-12">
+                        <b>Payment form example </b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card-body col-12">
+                        <div class="alert alert-danger" role="alert">
+                            Some fields are missing
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div>
+                              <label for="Card#" class="form-label">Card #</label>
+                              <input type="number" class="form-control" id="Card#">                            </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div>
+                              <label for="CVC#" class="form-label">CVC #</label>
+                              <input type="number" class="form-control" id="CVC#" placeholder="0000">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                          <label for="amount" class="form-label">Amount</label>
+                          <input type="number" class="form-control" id="amount" placeholder="Amount">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div>
+                          <label for="FirstName#" class="form-label">First Name</label>
+                          <input type="text" class="form-control" id="FirstName#">                            <div class="valid-feedback">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                          <label for="LastName#" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" id="LastName#">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                              <label for="city#" class="form-label">City</label>
+                              <input type="text" class="form-control" id="city">                                <div class="invalid-feedback">
+                            </div>
+                        </div>
+                        <div class="col-3 align-self-center my-1">
+                          <label for="inputState" class="form-label">State</label>
+                          <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-3 my-1 me-5">
+                          <label for="postalcode" class="form-label">Postal Code</label>
+                          <input type="number" class="form-control" id="postalcode">
+                      </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-3 text-center my-1 ms-5">
+                      <div class="bg-secondary px-0 rounded py-2">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="paymentmethod" id="paymentmethod1"
+                                  value="option1">
+                              <label class="form-check-label" for="paymentmethod1"><i
+                                      class="fa-brands fa-cc-mastercard fa-lg"></i></i></label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="paymentmethod" id="paymentmethod2"
+                                  value="option1">
+                              <label class="form-check-label" for="paymentmethod2"><i
+                                      class="fa-brands fa-cc-visa fa-lg"></i></label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="paymentmethod" id="paymentmethod3"
+                                  value="option1">
+                              <label class="form-check-label" for="paymentmethod3"><i
+                                      class="fa-brands fa-cc-paypal fa-lg"></i></label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="paymentmethod" id="paymentmethod4"
+                                  value="option1">
+                              <label class="form-check-label" for="paymentmethod4"><i
+                                      class="fa-brands fa-cc-amex fa-lg"></i></label>
+                          </div>
+                      </div>
+                  </div>
+
+                        <div class="col-6">
+                            <div>
+                                <label for="validationTextarea" class="form-label">Message</label>
+                                <textarea name="message" id="message" cols="30" rows="10" class="rounded"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter a message in the textarea.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="gap-2 d-md-flex justify-content-md-end  bg-light mt-1 border-top rounded-bottom p-3">
+                              <button class="btn btn-secondary me-2 " type="button">Cancel</button>
+                              <button class="btn btn-success me-5" type="button">Send</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                    crossorigin="anonymous"></script>
+                </card>
+               <script src="./app.js"></script> 
+            </form>
+          </div>
       <div class="fixed-bottom p-4">
         Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+        <a href="https://github.com/fcastillor90">F. Castillo </a>
       </div>
     </div>
   </body>
+
+  
 </html>
